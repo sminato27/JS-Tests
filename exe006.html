@@ -17,18 +17,18 @@
     <h1>Saudações!</h1>
     <p>Aqui vai o resultado.</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div id='msg'>Clique em mim!</div>
-    <div id='secmsg'>Clica em mim!²</div>
-    <div name='msgname'>Não vai clicar em mim?</div>
+    <div id='msgID1'>Clique em mim!</div>
+    <div id='msgID2'>Clica em mim!²</div>
+    <div name='msgname1'>Não vai clicar em mim?</div>
     <div name='msgname2'>Poxa vida...</div>
-    <div class='quarmsg'>Clica, pls</div>
+    <div class='msg'>Clica, pls</div>
     <script>
         let corpo = window.document.body // Variável pra acessar o 'body'.
-        let primeiroParagrafo = window.document.getElementsByTagName('p')[0]; // Criada a variável "primeiroParagrafo" e atribuído a ela usando DOM, o comando "getElementsByTagName" que pega o elemento selecionado para mostrar na tela, nesse caso, o ('p')[0], que seria o primeiro parágrafo, como diz o nome da variável.
-        let segundoParagrafo = window.document.getElementsByTagName('p')[1]; // Variável pra acessar o segundo '<p>' (parágrafo).
-        let primeiraDivID = window.document.getElementById('msg'); // Variável pra acessar a primeira '<div>' por ID.
-        let segundaDivID = window.document.getElementById('secmsg'); //Variável pra acessar a segunda '<div>' por ID.
-        let primeiraDivName = window.document.getElementsByName('msgname')[0]; // Variável pra acessar a primeira '<div>' por NAME.
+        let primeiroP = window.document.getElementsByTagName('p')[0]; // Criada a variável "primeiroParagrafo" e atribuído a ela usando DOM, o comando "getElementsByTagName" que pega o elemento selecionado para mostrar na tela, nesse caso, o ('p')[0], que seria o primeiro parágrafo, como diz o nome da variável.
+        let segundoP = window.document.getElementsByTagName('p')[1]; // Variável pra acessar o segundo '<p>' (parágrafo).
+        let primeiraDivID = window.document.getElementById('msgID1'); // Variável pra acessar a primeira '<div>' por ID.
+        let segundaDivID = window.document.getElementById('msgID2'); //Variável pra acessar a segunda '<div>' por ID.
+        let primeiraDivName = window.document.getElementsByName('msgname1')[0]; // Variável pra acessar a primeira '<div>' por NAME.
         let segundaDivName = window.document.getElementsByName('msgname2')[0]; // Variável pra acessar a segunda '<div>' por NAME. O seletor [] só vai mudar se houverem names iguais.
         
 
