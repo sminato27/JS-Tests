@@ -18,37 +18,43 @@
     <p>Aqui vai o resultado.</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div id='msgID1'>Clique em mim!</div>
-    <div id='msgID2'>Clica em mim!²</div>
+    <div id='msgID2'>Clique em mim!²</div>
+    <div id='msgID3'>Clique em mim!³</div>
     <div name='msgname1'>Não vai clicar em mim?</div>
     <div name='msgname2'>Poxa vida...</div>
-    <div class='msg'>Clica, pls</div>
+    <div class='msgclass1'>Clica, pls</div>
     <script>
+        // Declaração de variáveis abaixo:
         let corpo = window.document.body // Variável pra acessar o 'body'.
-        let primeiroP = window.document.getElementsByTagName('p')[0]; // Criada a variável "primeiroParagrafo" e atribuído a ela usando DOM, o comando "getElementsByTagName" que pega o elemento selecionado para mostrar na tela, nesse caso, o ('p')[0], que seria o primeiro parágrafo, como diz o nome da variável.
-        let segundoP = window.document.getElementsByTagName('p')[1]; // Variável pra acessar o segundo '<p>' (parágrafo).
+        let titulo = window.document.getElementsByTagName('h1')[0]; // Variável pra acessar o '<h1>'.
+        let primeiroP = window.document.getElementsByTagName('p')[0]; // Criada a variável "primeiroP" e atribuído a ela usando DOM, o comando "getElementsByTagName" que pega o elemento selecionado para mostrar na tela, nesse caso, o ('p')[0], que seria o primeiro parágrafo.
+        let segundoP = window.document.getElementsByTagName('p')[1]; // Variável pra acessar o segundo '<p>'.
         let primeiraDivID = window.document.getElementById('msgID1'); // Variável pra acessar a primeira '<div>' por ID.
-        let segundaDivID = window.document.getElementById('msgID2'); //Variável pra acessar a segunda '<div>' por ID.
+        let segundaDivID = window.document.getElementById('msgID2'); // Variável pra acessar a segunda '<div>' por ID.
         let primeiraDivName = window.document.getElementsByName('msgname1')[0]; // Variável pra acessar a primeira '<div>' por NAME.
         let segundaDivName = window.document.getElementsByName('msgname2')[0]; // Variável pra acessar a segunda '<div>' por NAME. O seletor [] só vai mudar se houverem names iguais.
+        let primeiraDivClass = window.document.getElementsByClassName('msgclass1')[0]; // Variável pra acessar a primeira '<div>' por CLASS.
+        let terceiraDivID = window.document.querySelector('div#msgID3'); // Toda ID é representada por '#' e toda CLASS é representada por '.' 
+        // Aqui termina a declaração das variáveis.
+
+        window.document.write('<br>');
+        window.document.write('Aqui vai o primeiro parágrafo: ' + primeiroP.innerText + '<br>'); // 'window.document.write' escreve na tela, logo, vai escrever o texto + o conteúdo da variável e '.innerText' mostra o texto dentro variável.
+        window.document.write('Aqui vai o segundo parágrafo: ' + segundoP.innerHTML + '<br>');
+        primeiraDivName.innerText = "Substituição!";
+        titulo.style.color = 'Purple';
+        terceiraDivID.style.color = 'Green';
         
-
-
-        window.document.write('Aqui vai o primeiro parágrafo: ' + primeiroParagrafo.innerText + '<br>'); // 'window.document.write' escreve na tela, logo, vai escrever o texto + o conteúdo da variável e '.innerText' mostra o texto dentro variável.
-        /*
-        primeiroParagrafo.style.color = 'Yellow'; // Muda a cor do primeiroParagrafo.
-        corpo.style.background = 'Gray'; // Muda a cor de fundo do 'body'.
-        primeiraDiv.style.background = 'Green'; // Muda a cor de fundo da 'div'. 
-        primeiraDiv.innerText = 'Estou aguardando...' // Atribui um novo valor a variável 'primeiraDiv' que altera o valor original da 'div'.
-        */
-
-        window.document.write('Aqui vai o segundo parágrafo: ' + segundoParagrafo.innerText);
-        primeiraDivName.innerText = "Olá!"
  
-
-        // 'innerText' pega o texto sem a formatação enquanto o 'innerHTML' pega o texto com a formatação.
-        // window.document.write(window.navigator.appName); // Mostra no documento o appName do navegador.
-        // window.document.write(window.document.URL); // Mostra a URL do documento.
-        // window.document.getElementsByTagName('taltag')[tallugar]; // Mostra a tag do documento.
+        /* 
+         Dicas:
+         primeiroP.style.color = 'Yellow'; / Muda a cor do texto.
+         corpo.style.background = 'Gray'; / Muda a cor de fundo do texto. 
+         primeiraDiv.innerText = 'Estou aguardando...' / Atribui um novo valor a variável 'primeiraDiv' que altera o valor original da 'div'.    
+         'innerText' pega o texto sem a formatação enquanto o 'innerHTML' pega o texto com a formatação.
+         window.document.write(window.navigator.appName); / Mostra no documento o appName do navegador.
+         window.document.write(window.document.URL); / Mostra a URL do documento.
+         window.document.getElementsByTagName('taltag')[tallugar]; / Mostra a tag do documento.
+        */
     </script>
 </body>
 </html>
