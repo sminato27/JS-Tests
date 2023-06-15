@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        div#area {
+            font: normal 20pt Arial; /* Muda a fonte da letra */
+            background: purple; /* Muda a cor do background */
+            color: yellow; /* Muda a cor do texto */
+            width: 200px; /* Largura */
+            height: 200px; /* Altura */ 
+            line-height: 200px; /* Altura do texto */
+            text-align: center; /* Posição de alinhamento do texto */
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja comigo!
+    </div>
+
+    <script>
+        let divArea = window.document.getElementById('area'); // Criada a variável 'divArea' que acessa a div pelo ID.
+
+        divArea.addEventListener('click', clicar) // Criado evento de click na área.
+        divArea.addEventListener('mouseenter', entrar) // Criado evento do mouse entrar na área.
+        divArea.addEventListener('mouseout', sair) // Criado evento do mouse sair da área.
+
+
+        // Função de nome "clicar". Vai ser executado tudo o que for escrito dentro da função. Nesse caso, o texto da variável divArea vai receber outra atribuição e mudará a cor do background.
+        function clicar() { 
+            divArea.innerText = 'Clicou!';
+            divArea.style.background = 'green';
+        }
+
+        function entrar() {
+            divArea.innerText = 'Entrou!';
+        }
+        
+        function sair() {
+            divArea.innerText = 'Saiu';
+            divArea.style.background = 'purple';
+        }
+    </script>
+
+
+</body>
+</html>
