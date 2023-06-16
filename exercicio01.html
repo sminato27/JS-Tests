@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font: normal 17pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Identificação de Nacionalidade</h1>
+    Digite o nome do seu país de origem: <input type="text" name="txtpaís" id="txtpaís" >
+    <input type="button" value="Selecionar" onclick="verificação()">
+    <div id="resposta"></div>     
+
+    <script>
+        function verificação() {
+        let inputPaís = window.document.getElementById('txtpaís'); // Recebe o que usuário inserir no input.
+        let resposta = window.document.querySelector('div#resposta'); // Recebe a div.
+        let país = (inputPaís.value) // Recebe o valor da variável 'inputPaís'
+        if (país == 'Brasil') {
+            resposta.innerHTML = '<p>Você é <strong>brasileiro!</strong></p>'
+        } else {
+            resposta.innerHTML = '<p>Você é <strong>estrangeiro!</strong></p>'
+        }
+    }
+
+
+    </script>
+
+</body>
+</html>
