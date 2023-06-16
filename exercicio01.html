@@ -22,9 +22,9 @@
 
     <script>
         function verificação() {
-        let inputPaís = window.document.getElementById('txtpaís'); // Recebe o que usuário inserir no input.
+        let inputPaís = window.document.getElementById('txtpaís'); // Recebe o input.
         let resposta = window.document.querySelector('div#resposta'); // Recebe a div.
-        let país = (inputPaís.value) // Recebe o valor da variável 'inputPaís'
+        let país = (inputPaís.value) // Recebe o valor da variável 'inputPaís', no caso, o que o usuário inserir.
         if (país == 'Brasil') {
             resposta.innerHTML = '<p>Você é <strong>brasileiro!</strong></p>'
         } else {
